@@ -1,4 +1,4 @@
-function findFirstRepeated(gifts) {
+const findFirstRepeated = (gifts: number[]) => {
   /**
    * Initial
    */
@@ -27,12 +27,9 @@ function findFirstRepeated(gifts) {
   const seen = new Set();
 
   for (let i = 0; i < gifts.length; i++) {
-    if (seen.has(gifts[i])) {
-      console.log(seen, gifts[i]);
-      return gifts[i]; // First repeated element found
-    }
+    if (seen.has(gifts[i])) return gifts[i];
     seen.add(gifts[i]);
   }
 
-  return -1; // No repeated element found
-}
+  return -1;
+};
